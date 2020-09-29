@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Import File</h2>
+<mat-dialog-content>
+  <nz-upload [(nzFileList)]="fileList" [nzBeforeUpload]="beforeUpload" [nzAccept]="'.csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'">
+    <button nz-button><i nz-icon nzType="upload"></i>Chọn file import</button>
+  </nz-upload>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button nz-button [nzType]="'primary'" [nzLoading]="uploading" (click)="handleUpload()"
+    [disabled]="fileList.length == 0" style="margin-top: 16px">
+    {{ uploading ? 'Uploading' : 'Start Upload' }}
+  </button>
+</mat-dialog-actions>
