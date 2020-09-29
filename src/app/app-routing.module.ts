@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BuildInvoiceExamplesComponent } from './pages/build-invoice-examples/build-invoice-examples.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,11 @@ const routes: Routes = [
   },
   {
     path: 'services', loadChildren: () => import('./pages/services/services.module').then(m => m.servicesModule),
+    data: { breadcrumb: 'Dịch vụ' }
+  },
+  {
+    path: 'build-invoice-examples',
+    component: BuildInvoiceExamplesComponent,
     data: { breadcrumb: 'Dịch vụ' }
   },
 ];

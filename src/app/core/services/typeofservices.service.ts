@@ -29,6 +29,11 @@ export class TypeOfServicesService {
     return this.http.get(`${this.endpoint}`);
   }
 
+    // Get all TypeOfService Activated
+    GetAllTypeOfServiceActivated() {
+      return this.http.get(`${this.endpoint}/typeOfServiceActived`);
+    }
+
   // Get TypeOfService by Id
   GetTypeOfService(id): Observable<any> {
     const API_URL = `${this.endpoint}/read/${id}`;

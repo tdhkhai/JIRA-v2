@@ -22,7 +22,7 @@ export class CreateServicesComponent implements OnInit {
 
   ngOnInit(): void {
     this.buildUnitForm();
-    this.getAllTypeOfServices();
+    this.getAllTypeOfServicesActivated();
   }
 
   buildUnitForm() {
@@ -36,8 +36,8 @@ export class CreateServicesComponent implements OnInit {
     });
   }
 
-  getAllTypeOfServices(){
-    this.typeOfSerice.GetAllTypeOfService().subscribe(data => {
+  getAllTypeOfServicesActivated(){
+    this.typeOfSerice.GetAllTypeOfServiceActivated().subscribe(data => {
       this.listOfData = data;
     });
   }
