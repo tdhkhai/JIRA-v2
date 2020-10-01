@@ -15,6 +15,7 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { AntDesignModule } from './antDesign.module';
 import { MatModule } from './mat.module';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 registerLocaleData(en);
 
@@ -33,10 +34,16 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     AntDesignModule,
     MatModule,
-    // SharedModule,
+    HighlightModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      }
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BuildInvoiceExamplesComponent } from './pages/build-invoice-examples/build-invoice-examples.component';
 
 const routes: Routes = [
   {
@@ -24,9 +23,8 @@ const routes: Routes = [
     data: { breadcrumb: 'Dịch vụ' }
   },
   {
-    path: 'build-invoice-examples',
-    component: BuildInvoiceExamplesComponent,
-    data: { breadcrumb: 'Dịch vụ' }
+    path: 'vnpt-invoice', loadChildren: () => import('./pages/vnpt-invoice/vnpt-invoice.module').then(m => m.VNPTInvoiceModule),
+    data: { breadcrumb: 'Hóa đơn điện tử (VNPT Invoice)' }
   },
 ];
 

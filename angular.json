@@ -15,6 +15,9 @@
       "prefix": "app",
       "architect": {
         "build": {
+          "allowedCommonJsDependencies": [
+            "highlight.js"
+          ],
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/JIRA-v2",
@@ -34,6 +37,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "./node_modules/highlight.js/styles/github.css",
               "src/theme.less",
               "src/styles.scss"
             ],

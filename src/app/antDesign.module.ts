@@ -22,6 +22,7 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 @NgModule({
   imports: [
@@ -48,6 +49,7 @@ import { NzUploadModule } from 'ng-zorro-antd/upload';
     NzNotificationModule,
     NzAutocompleteModule,
     NzUploadModule,
+    NzGridModule,
   ],
   exports: [
     NzIconModule,
@@ -73,6 +75,7 @@ import { NzUploadModule } from 'ng-zorro-antd/upload';
     NzNotificationModule,
     NzAutocompleteModule,
     NzUploadModule,
+    NzGridModule,
   ]
 })
 export class AntDesignModule { }
